@@ -1,24 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - Prints the sum of all the multiples of 3 or 5 below 1024.
+ * main - Prints the Fibonacci sequence up to 1024.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i;
-    int sum = 0;
+    int i, fibonacci_limit = 1024;
+    long int first = 0, second = 1, next;
 
-    for (i = 0; i < 1024; i++)
+    printf("%ld, %ld", first, second);
+
+    for (i = 2; i < fibonacci_limit; i++)
     {
-        if (i % 3 == 0 || i % 5 == 0)
-        {
-            sum += i;
-        }
+        next = first + second;
+        if (next > fibonacci_limit)
+            break;
+
+        printf(", %ld", next);
+
+        first = second;
+        second = next;
     }
 
-    printf("%d\n", sum);
+    printf("\n");
 
     return 0;
 }
