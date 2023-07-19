@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-    long int fib1 = 1, fib2 = 2, nextTerm, sum = 0;
+	int fib1 = 1, fib2 = 2, nextTerm, sum = 0;
 
-    while (fib1 <= 4000000)
-    {
-        if (fib1 % 2 == 0)
-            sum += fib1;
+	while (fib1 <= 4000000)
+	{
+		if (fib1 % 2 == 0)
+			sum += fib1;
 
-        nextTerm = fib1 + fib2;
-        fib1 = fib2;
-        fib2 = nextTerm;
-    }
+		nextTerm = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = nextTerm;
+	}
 
-    printf("%ld\n", sum);
+	printf("%d\n", sum);
 
-    return 0;
+	return (0);
 }
