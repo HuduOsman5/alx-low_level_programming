@@ -1,30 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints the Fibonacci sequence up to 1024.
- *
- * Return: Always 0 (Success)
+ * print_alphabet - prints the lowercase alphabet followed by a new line
  */
-int main(void)
+void print_alphabet(void)
 {
-    int i, fibonacci_limit = 1024;
-    long int first = 0, second = 1, next;
+	char letter;
 
-    printf("%ld, %ld", first, second);
+	for (letter = 'a'; letter <= 'z'; letter++)
+		_putchar(letter);
 
-    for (i = 2; i < fibonacci_limit; i++)
-    {
-        next = first + second;
-        if (next > fibonacci_limit)
-            break;
-
-        printf(", %ld", next);
-
-        first = second;
-        second = next;
-    }
-
-    printf("\n");
-
-    return 0;
+	_putchar('\n');
 }
